@@ -29,6 +29,7 @@ Peripherals
    peci.rst
    regulators.rst
    rtc.rst
+   rtio.rst
    sensor.rst
    spi.rst
    uart.rst
