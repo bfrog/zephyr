@@ -158,6 +158,7 @@
 /drivers/serial/uart_xlnx_ps.c            @wjliang
 /drivers/net/                             @jukkar @tbursztyka
 /drivers/ptp_clock/                       @jukkar
+/drivers/rtio/                            @bfrog
 /drivers/spi/                             @tbursztyka
 /drivers/spi/spi_ll_stm32.*               @superna9999
 /drivers/timer/apic_timer.c               @gnuless
@@ -220,6 +221,7 @@
 /include/drivers/hwinfo.h                 @alexanderwachter
 /include/drivers/led.h                    @Mani-Sadhasivam
 /include/drivers/led_strip.h              @mbolivar
+/include/drivers/rtio.h                   @bfrog
 /include/drivers/sensor.h                 @MaureenHelm
 /include/drivers/spi.h                    @tbursztyka
 /include/app_memory/                      @andrewboie
@@ -375,6 +377,7 @@
 /tests/drivers/can/                       @alexanderwachter
 /tests/drivers/flash_simulator/           @nvlsianpu
 /tests/drivers/hwinfo/                    @alexanderwachter
+/tests/drivers/rtio/                      @bfrog
 /tests/drivers/spi/                       @tbursztyka
 /tests/drivers/uart/uart_async_api/       @Mierunski
 /tests/kernel/                            @andrewboie @andyross @nashif
@@ -389,6 +392,7 @@
 /tests/subsys/fs/                         @nashif @wentongwu
 /tests/subsys/settings/                   @nvlsianpu
 /tests/subsys/shell/                      @jakub-uC @nordic-krch
+
 # Get all docs reviewed
 *.rst                                     @dbkinder
 *posix*.rst                               @dbkinder @aescolar

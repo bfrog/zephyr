@@ -1,0 +1,26 @@
+# Kconfig - rtio configuration options
+
+#
+# Copyright (c) 2019 Thomas Burdick <thomas.burdick@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig RTIO
+	bool "RTIO Drivers"
+	help
+	  Include rtio drivers in system config
+
+if RTIO
+
+module = RTIO
+module-str = rtio
+source "subsys/logging/Kconfig.template.log_config"
+
+config RTIO_INIT_PRIORITY
+	int "RTIO init priority"
+	default 90
+	help
+	  RTIO initialization priority.
+
+endif # RTIO
