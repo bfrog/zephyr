@@ -1,0 +1,25 @@
+# Kconfig - ICM20649 high speed, high range accelerometer and gyroscope sensor
+# options
+
+#
+# Copyright (c) 2018 LeanUp
+# Copyright (c) 2019 Thomas Burdick <thomas.burdick@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig ICM20649
+	bool "ICM20649 SPI accelerometer and gyroscope Chip"
+	depends on SENSOR && SPI
+	default n
+	help
+	  Enable driver for ICM20649 accelerometer and gyroscope
+	  sensor.
+
+config ICM20649_VERIFY_WRITE
+	bool "ICM20649 Verify register writes by reading back the register value"
+	default n
+	depends on ICM20649
+	help
+	  This option is meant to be used to debug register setup.
+

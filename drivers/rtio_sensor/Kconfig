@@ -1,0 +1,30 @@
+# Kconfig - rtio_sensor configuration options
+
+#
+# Copyright (c) 2019 Thomas Burdick <thomas.burdick@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig RTIO_SENSOR
+	bool "RTIO Drivers"
+	help
+	  Include rtio drivers in system config
+
+if RTIO_SENSOR
+
+module = RTIO
+module-str = rtio
+source "subsys/logging/Kconfig.template.log_config"
+
+config RTIO_SENSOR_INIT_PRIORITY
+	int "RTIO Sensor init priority"
+	default 90
+	help
+	  RTIO Sensor initialization priority.
+
+comment "Device Drivers"
+
+source "drivers/rtio_sensor/icm20649/Kconfig"
+
+endif # RTIO_SENSOR

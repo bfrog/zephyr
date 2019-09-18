@@ -87,4 +87,7 @@ source "drivers/espi/Kconfig"
 
 source "drivers/rtio/Kconfig"
 
+source "drivers/rtio_sensor/Kconfig"
+
+
 endmenu
